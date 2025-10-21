@@ -5,7 +5,7 @@ This repository contains the code accompanying the paper
 *“Quantile-based modeling of scale dynamics in financial returns for Value-at-Risk and Expected Shortfall forecasting”*  
 by **Xiaochun Liu** and **Richard Luger**.
 
-Assembled on: 17 September 2025
+Assembled on: 21 October 2025
 
 ---
 
@@ -19,22 +19,22 @@ Assembled on: 17 September 2025
 
 
 ### `Example_QbSD/`
-* **Run_example.R** – Illustrative example: QbSD Value-at-Risk (VaR) and Expected Shortfall (ES) for the S&P 500.
+* **run_example.R** – Illustrative example: QbSD Value-at-Risk (VaR) and Expected Shortfall (ES) for the S&P 500.
 
 ### `Tables_1-4/`
-* **Run_simulations.R** – Reproduces the simulation results reported in Tables 1–4.
+* **run_simulations.R** – Reproduces the simulation results reported in Tables 1–4.
 
 ### `Tables_5-10/`
 Contains the code and outputs used to generate the forecasting results reported in Tables 5–10.  
 Key subfolders:
 * **Full_forecasting/** – Driver scripts (`01_run_SP500.R` … `08_run_TSX.R`) to run the full forecasting experiment for each index.  
 * **Full_forecasting_output/** – **Intermediate generated datasets**: saved forecast objects produced by the scripts in `Full_forecasting/`. These objects are included so users can reproduce the tables without re-running the full forecasting experiment.  
-* **Gen_tables/** – Script (`Run_Tables_5-10.R`) that processes outputs and generates the summary tables.
+* **Gen_tables/** – Scripts (`run_Tables_5-10.R`, `run_Tables_C1-C6.R`, `run_Tables_C7-C12.R`) that process outputs and generate the summary tables.
 
 ### `Utilities/`
 Shared helper code used across the project.  
-* **Functions.R** – R helper functions and wrappers (e.g., the `QbSD` interface).  
-* **Functions.cpp** – C++ implementations of core routines (called from R via Rcpp).
+* **functions.R** – R helper functions and wrappers (e.g., the `QbSD` interface).  
+* **functions.cpp** – C++ implementations of core routines (called from R via Rcpp).
 
 
 > **Note on file paths**  
@@ -44,7 +44,7 @@ Shared helper code used across the project.
 ## Requirements
 
 ### Software
-- **R** (version 4.0 or higher recommended; **tested with 4.5.1**)
+- **R** (version 4.0 or higher recommended; **tested with 4.5.0**)
 
 ### R packages  
 CRAN packages required (**tested versions in parentheses**):  
@@ -64,19 +64,27 @@ Compiled code via `Rcpp::sourceCpp()` requires:
 - **Linux**: GNU build tools (e.g., `sudo apt install build-essential`)
 
 
+
+
+
+
+
 ## Runtime
 
-**Computer type**: MacBook Pro   
-**CPU**: Apple M3 Max, 14-core CPU  
-**Memory**: 96 GB unified RAM
+All experiments were run on a High-Performance Computing (HPC) system of the Digital Research Alliance of Canada (Rorqual cluster).
+
+**Node type**: Dell Inc. PowerEdge R6625  
+**CPUs**: 2 × AMD EPYC 9654 (“Genoa”), 96 cores each (192 cores per node)  
+**Memory**: ~755 GB RAM per node
+
+
+
 
 **Measured runtimes**
-- Illustrative example (`Example_QbSD/Run_example.R`): **< 1 minute**
-- Monte Carlo simulations (for a single DGP configuration: **T = 2500, v = 20, λ = 0, α = 0.01; 1000 reps**): **~1.6 hours**
-- Full forecasting results for a **single index**: **~67.5 hours** (**~2.8 days**)
-- Generate tables (`Tables_5-10/Gen_tables/Run_Tables_5-10.R`): **~1 hour**
-
-
+- Illustrative example (`Example_QbSD/Run_example.R`): **< 1 min**
+- Monte Carlo simulations (for a single DGP configuration: **T = 1250, v = 20, λ = 0, α = 0.01; 1000 reps**): **~2 h**
+- Full forecasting results for a single index: **~5 days 16 h**
+- Generate tables (`Tables_5-10/Gen_tables/run_Tables_5-10.R`): **~1 h 45 min**
 
 
 ## Contact

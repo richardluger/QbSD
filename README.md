@@ -25,7 +25,7 @@ Assembled on: 21 October 2025
 * **run_simulations.R** – Reproduces the simulation results reported in Tables 1–4.
 
 ### `Tables_5-10/`
-Contains the code and outputs used to generate the forecasting results reported in Tables 5–10.  
+Contains the code and outputs used to generate the forecasting results reported in Tables 5–10 and in the Supplementary material (Tables C1–C12).  
 Key subfolders:
 * **Full_forecasting/** – Driver scripts (`01_run_SP500.R` … `08_run_TSX.R`) to run the full forecasting experiment for each index.  
 * **Full_forecasting_output/** – **Intermediate generated datasets**: saved forecast objects produced by the scripts in `Full_forecasting/`. These objects are included so users can reproduce the tables without re-running the full forecasting experiment.  

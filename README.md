@@ -5,7 +5,7 @@ This repository contains the code accompanying the paper
 *“Quantile-based modeling of scale dynamics in financial returns for Value-at-Risk and Expected Shortfall forecasting”*  
 by **Xiaochun Liu** and **Richard Luger**.
 
-Assembled on: 21 October 2025
+Assembled on: 22 October 2025
 
 ---
 

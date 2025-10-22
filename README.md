@@ -81,7 +81,7 @@ All experiments were run on a High-Performance Computing (HPC) system of the Dig
 
 
 **Measured runtimes**
-- Illustrative example (`Example_QbSD/Run_example.R`): **< 1 min**
+- Illustrative example (`Example_QbSD/run_example.R`): **< 1 min**
 - Monte Carlo simulations (for a single DGP configuration: **T = 1250, v = 20, λ = 0, α = 0.01; 1000 reps**): **~2 h**
 - Full forecasting results for a single index: **~5 days 16 h**
 - Generate tables (`Tables_5-10/Gen_tables/run_Tables_5-10.R`): **~1 h 45 min**

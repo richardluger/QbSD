@@ -5,7 +5,7 @@ This repository contains the code accompanying the paper
 *“Quantile-based modeling of scale dynamics in financial returns for Value-at-Risk and Expected Shortfall forecasting”*  
 by **Xiaochun Liu** and **Richard Luger**.
 
-Assembled on: 22 October 2025
+Updated on: December 8, 2025
 
 ---
 
@@ -21,8 +21,9 @@ Assembled on: 22 October 2025
 ### `Example_QbSD/`
 * **run_example.R** – Illustrative example: QbSD Value-at-Risk (VaR) and Expected Shortfall (ES) for the S&P 500.
 
+
 ### `Tables_1-4/`
-* **run_simulations.R** – Reproduces the simulation results reported in Tables 1–4.
+* **run_Tables_1-2.R** and **run_Tables_3-4.R** – Scripts to reproduce the simulation results for Tables 1–4.
 
 ### `Tables_5-10/`
 Contains the code and outputs used to generate the forecasting results reported in Tables 5–10 and in the Supplementary Tables C1–C12.  
